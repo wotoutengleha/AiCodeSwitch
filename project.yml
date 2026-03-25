@@ -1,0 +1,45 @@
+name: CodexSwitcher
+options:
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+targets:
+  CodexSwitcher:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Sources/CodexSwitcher
+    resources:
+      - path: Sources/CodexSwitcher/Resources
+    settings:
+      base:
+        PRODUCT_NAME: "AiCodeSwitch"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleName: "AiCodeSwitch"
+        INFOPLIST_KEY_CFBundleDisplayName: "AiCodeSwitch"
+        INFOPLIST_KEY_LSMinimumSystemVersion: "14.0"
+        INFOPLIST_KEY_LSUIElement: YES
+        CODE_SIGN_STYLE: Manual
+        CURRENT_PROJECT_VERSION: 5
+        MARKETING_VERSION: 1.0.7
+        PRODUCT_BUNDLE_IDENTIFIER: com.wenlong.aicodeswitch
+  CodexSwitcherTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Tests/CodexSwitcherTests
+    dependencies:
+      - target: CodexSwitcher
+schemes:
+  CodexSwitcher:
+    build:
+      targets:
+        CodexSwitcher: all
+        CodexSwitcherTests: [test]
+    test:
+      targets:
+        - CodexSwitcherTests
