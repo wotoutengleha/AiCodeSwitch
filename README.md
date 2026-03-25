@@ -2,7 +2,7 @@
 
 AiCodeSwitch 是一个 macOS 菜单栏应用，用来管理和切换多个 Codex 账号。
 
-它支持：
+## 功能
 
 - 自动导入当前 `~/.codex/auth.json` 中正在使用的账号
 - 展示当前账号的 `5 Hours` 和 `Weekly` 用量
@@ -24,11 +24,7 @@ AiCodeSwitch 是一个 macOS 菜单栏应用，用来管理和切换多个 Codex
 xcodebuild -project CodexSwitcher.xcodeproj -scheme CodexSwitcher -destination 'platform=macOS' build
 ```
 
-或直接用 Xcode 打开：
-
-- `CodexSwitcher.xcodeproj`
-- Scheme 选择 `CodexSwitcher`
-- Destination 选择 `My Mac`
+也可以直接用 Xcode 打开 `CodexSwitcher.xcodeproj`，Scheme 选择 `CodexSwitcher`，Destination 选择 `My Mac`。
 
 ## 测试
 
@@ -57,7 +53,7 @@ Tests/CodexSwitcherTests/
 - 凭证优先保存在 Keychain
 - 如果独立打包环境下 Keychain 不可用，会回退到应用私有本地存储
 
-## 注意
+## 仓库说明
 
 - 仓库不包含打包产物、桌面导出包、DerivedData、dist 目录和本地规划文件
 - 当前发布方式更适合本地自用；如果需要稳定的 Keychain 行为，建议后续补正式开发者签名

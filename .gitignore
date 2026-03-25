@@ -1,17 +1,36 @@
 .DS_Store
+
+# Build output
 .build/
 .swiftpm/
+build/
 dist/
 DerivedData/
-build/
 *.app
 *.dSYM
+*.dSYM.zip
 *.xcresult
+*.ipa
 
+# Xcode user data
+xcuserdata/
 CodexSwitcher.xcodeproj/.idea/
 CodexSwitcher.xcodeproj/project.xcworkspace/xcuserdata/
 CodexSwitcher.xcodeproj/xcuserdata/
+*.hmap
 
+# Swift playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Carthage / fastlane
+Carthage/Build/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Local planning / notes
 task_plan.md
 findings.md
 progress.md
