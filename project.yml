@@ -1,4 +1,4 @@
-name: CodexSwitcher
+name: AiCodeSwitch
 options:
   createIntermediateGroups: true
 settings:
@@ -6,14 +6,14 @@ settings:
     SWIFT_VERSION: 6.0
     MACOSX_DEPLOYMENT_TARGET: "14.0"
 targets:
-  CodexSwitcher:
+  AiCodeSwitch:
     type: application
     platform: macOS
     deploymentTarget: "14.0"
     sources:
-      - path: Sources/CodexSwitcher
+      - path: Sources/AiCodeSwitch
     resources:
-      - path: Sources/CodexSwitcher/Resources
+      - path: Sources/AiCodeSwitch/Resources
     settings:
       base:
         PRODUCT_NAME: "AiCodeSwitch"
@@ -26,20 +26,20 @@ targets:
         CURRENT_PROJECT_VERSION: 5
         MARKETING_VERSION: 1.0.7
         PRODUCT_BUNDLE_IDENTIFIER: com.wenlong.aicodeswitch
-  CodexSwitcherTests:
+  AiCodeSwitchTests:
     type: bundle.unit-test
     platform: macOS
     deploymentTarget: "14.0"
     sources:
-      - path: Tests/CodexSwitcherTests
+      - path: Tests/AiCodeSwitchTests
     dependencies:
-      - target: CodexSwitcher
+      - target: AiCodeSwitch
 schemes:
-  CodexSwitcher:
+  AiCodeSwitch:
     build:
       targets:
-        CodexSwitcher: all
-        CodexSwitcherTests: [test]
+        AiCodeSwitch: all
+        AiCodeSwitchTests: [test]
     test:
       targets:
-        - CodexSwitcherTests
+        - AiCodeSwitchTests

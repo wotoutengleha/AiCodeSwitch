@@ -16,26 +16,26 @@ AiCodeSwitch 是一个 macOS 菜单栏应用，用来管理和切换多个 Codex
 - Swift 6
 - SwiftUI
 - macOS 14+
-- Xcode 工程：`CodexSwitcher.xcodeproj`
+- Xcode 工程：`AiCodeSwitch.xcodeproj`
 
 ## 本地运行
 
 ```bash
-xcodebuild -project CodexSwitcher.xcodeproj -scheme CodexSwitcher -destination 'platform=macOS' build
+xcodebuild -project AiCodeSwitch.xcodeproj -scheme AiCodeSwitch -destination 'platform=macOS' build
 ```
 
-也可以直接用 Xcode 打开 `CodexSwitcher.xcodeproj`，Scheme 选择 `CodexSwitcher`，Destination 选择 `My Mac`。
+也可以直接用 Xcode 打开 `AiCodeSwitch.xcodeproj`，Scheme 选择 `AiCodeSwitch`，Destination 选择 `My Mac`。
 
 ## 测试
 
 ```bash
-xcodebuild -project CodexSwitcher.xcodeproj -scheme CodexSwitcher -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO test
+xcodebuild -project AiCodeSwitch.xcodeproj -scheme AiCodeSwitch -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO test
 ```
 
 ## 目录结构
 
 ```text
-Sources/CodexSwitcher/
+Sources/AiCodeSwitch/
   App/                应用入口与容器
   Behavior/           协调器与业务逻辑
   Domain/             模型、协议、本地化
@@ -44,12 +44,12 @@ Sources/CodexSwitcher/
   Layout/             布局常量
   Resources/          图标、本地化、菜单栏资源
   UI/                 通用 UI 组件
-Tests/CodexSwitcherTests/
+Tests/AiCodeSwitchTests/
 ```
 
 ## 数据与凭证
 
-- 账号元数据保存在 `~/Library/Application Support/CodexSwitcher`
+- 账号元数据当前仍兼容保存在 `~/Library/Application Support/CodexSwitcher`
 - 凭证优先保存在 Keychain
 - 如果独立打包环境下 Keychain 不可用，会回退到应用私有本地存储
 

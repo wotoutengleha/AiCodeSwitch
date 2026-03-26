@@ -2,26 +2,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "CodexSwitcher",
+    name: "AiCodeSwitch",
     defaultLocalization: "en",
     platforms: [
         .macOS(.v14)
     ],
     products: [
-        .executable(name: "AiCodeSwitch", targets: ["CodexSwitcher"])
+        .executable(name: "AiCodeSwitch", targets: ["AiCodeSwitch"])
     ],
     targets: [
         .executableTarget(
-            name: "CodexSwitcher",
-            path: "Sources/CodexSwitcher",
+            name: "AiCodeSwitch",
+            path: "Sources/AiCodeSwitch",
             resources: [
                 .process("Resources")
             ]
         ),
         .testTarget(
-            name: "CodexSwitcherTests",
-            dependencies: ["CodexSwitcher"],
-            path: "Tests/CodexSwitcherTests"
+            name: "AiCodeSwitchTests",
+            dependencies: ["AiCodeSwitch"],
+            path: "Tests/AiCodeSwitchTests"
         )
     ]
 )
